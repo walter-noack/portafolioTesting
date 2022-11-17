@@ -1,21 +1,22 @@
 const { Schema, model } = require('mongoose');
-const UserSchema = Schema({
-    name: {
+const PokeSchema = Schema({
+    number: {
         type: String,
         required: true
     },
-    email: {
+    name: {
         type: String,
         required: true,
         unique: true
     },
-    pass: {
+    type1: {
         type: String,
         required: true
     },
-    role: {
+    type2: {
         type: String,
-        required: true,
-default: 'USER_ROLE' }
+        
+    },
+    
 });
-module.exports = model('User', UserSchema);
+module.exports = model('Pokemon', PokeSchema);

@@ -12,7 +12,7 @@ app.use(express.json());
 stringConnection();
 
 //RUTAS
-app.use('/api/user', require('./routes/user.route'));
+app.use('/api/poke', require('./routes/poke.route'));
 
 
 app.listen(process.env.PORT, () =>{
