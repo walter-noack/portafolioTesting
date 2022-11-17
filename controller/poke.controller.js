@@ -5,9 +5,8 @@ const createPokemon = (req, res) => {
 
     pokemon.save().then(() => {
         res.json({
-            ok: true,
-            pokemon,
-            msg: 'Pokemon agregado a la Pokedex'
+            msg: 'Pokemon agregado a la Pokedex',
+            pokemon
         });
     }).catch(() => {
         res.json({
