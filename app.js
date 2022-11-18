@@ -14,7 +14,7 @@ stringConnection();
 app.use('/api/poke', require('./routes/poke.route'));
 
 
-app.listen(process.env.PORT, () =>{
-    console.log('El servidor está corriendo en el puerto: '+ process.env.PORT)
+app.listen(4000, () =>{
+    console.log('El servidor está corriendo en el puerto: '+ 4000)
 });
 
