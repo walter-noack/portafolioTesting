@@ -34,7 +34,6 @@ const updatePokemon = async (req, res) => {
     .then(result=>{
         res.status(200).json({
             message: 'La información del Pokemon ha sido actualizada',
-            pokemon: result
         })
     }).catch(err => {
         res.status(500).json({
