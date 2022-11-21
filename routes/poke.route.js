@@ -5,6 +5,7 @@ const router = Router();
 
 router.post('/', createPokemon);
 router.get('/', getPokemon);
+/* router.get('/type', getType); */
 router.put('/:_id', updatePokemon);
 
 module.exports = router;
