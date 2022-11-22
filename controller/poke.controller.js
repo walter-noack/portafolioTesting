@@ -33,6 +33,16 @@ const getType = async (req, res) => {
     }
 }
 
+const getName = async (req, res) => {
+    try{
+        const name = req.params.name;
+        const nameList = await Pokemon.find({name});
+        res.json(nameList);
+    } catch (e) {
+        res.send ({message: "Hubo un error en la pokedex"})
+    }
+}
+
 
 const updatePokemon = async (req, res) => {
     console.log(req.body);
@@ -63,5 +73,6 @@ module.exports = {
     getType, 
     createPokemon,
     updatePokemon,
-    deletePokemon
+    deletePokemon,
+    getName
 }
