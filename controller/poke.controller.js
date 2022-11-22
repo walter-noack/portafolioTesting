@@ -52,9 +52,16 @@ const updatePokemon = async (req, res) => {
     
 }
 
+const deletePokemon = async (req, res) => {
+    console.log(req.params);
+    let pokemon = await Pokemon.deleteOne(req.params);
+    res.send(pokemon);
+ };
+
 module.exports = {
     getPokemon,
     getType, 
     createPokemon,
-    updatePokemon
+    updatePokemon,
+    deletePokemon
 }
