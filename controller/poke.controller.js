@@ -29,15 +29,10 @@ const getType = async (req, res) => {
         const typeList = await Pokemon.find({type1});
         res.json(typeList);
     } catch (e) {
-        res.send ({message: "Error in fetching type"})
+        res.send ({message: "Hubo un error en la pokedex"})
     }
 }
 
-/* const getType = async (req, res) => {
-    console.log(req.body);
-    let type = await Pokemon.find();
-    res.send(type);
-};  */
 
 const updatePokemon = async (req, res) => {
     console.log(req.body);
