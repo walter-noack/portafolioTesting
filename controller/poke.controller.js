@@ -62,6 +62,8 @@ const updatePokemon = async (req, res) => {
     
 }
 
+//hola
+
 const deletePokemon = async (req, res) => {
     console.log(req.params);
     let pokemon = await Pokemon.deleteOne(req.params);
