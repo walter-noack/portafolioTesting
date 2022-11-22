@@ -62,7 +62,7 @@ const updatePokemon = async (req, res) => {
     
 }
 
-//hola.
+//hola..
 
 const deletePokemon = async (req, res) => {
     console.log(req.params);
