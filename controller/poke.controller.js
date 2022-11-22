@@ -23,11 +23,21 @@ const getPokemon = async (req, res) => {
    res.send(pokemon);
 };
 
+const getType = async (req, res) => {
+    try{
+        const type1 = req.params.type1;
+        const typeList = await Pokemon.find({type1});
+        res.json(typeList);
+    } catch (e) {
+        res.send ({message: "Error in fetching type"})
+    }
+}
+
 /* const getType = async (req, res) => {
     console.log(req.body);
-    let type = await type1.find();
+    let type = await Pokemon.find();
     res.send(type);
- }; */
+};  */
 
 const updatePokemon = async (req, res) => {
     console.log(req.body);
@@ -49,7 +59,7 @@ const updatePokemon = async (req, res) => {
 
 module.exports = {
     getPokemon,
-  /*   getType, */
+    getType, 
     createPokemon,
     updatePokemon
 }

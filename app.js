@@ -14,7 +14,6 @@ stringConnection();
 
 //RUTAS
 app.use('/api/poke', require('./routes/poke.route'));
-app.use('/api/poke/type', require('./routes/poke.route'))
 
 
 app.listen(4000, () =>{
