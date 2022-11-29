@@ -62,7 +62,21 @@ const updatePokemon = async (req, res) => {
     
 }
 
-//hola..
+const getPokeByID = (req, res) => {
+    Notes.findById({ _id: req.params.id })
+        .then(pokes => {
+            res.status(200).json({
+                message: 'Nota encontrada',
+                pokes: pokes
+            })
+        })
+        .catch(() => {
+            res.json({
+                ok: false,
+                msg: "Falló búsqueda de ID",
+            });
+        });
+};
 
 const deletePokemon = async (req, res) => {
     console.log(req.params);
@@ -76,5 +90,6 @@ module.exports = {
     createPokemon,
     updatePokemon,
     deletePokemon,
-    getName
+    getName,
+    getPokeByID
 }
