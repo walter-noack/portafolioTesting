@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const PokeSchema = Schema({
     number: {
         type: String,
-        required: true
+        required: true,
     },
     name: {
         type: String,
