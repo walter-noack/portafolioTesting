@@ -7,7 +7,6 @@ const PokeSchema = Schema({
     name: {
         type: String,
         required: true,
-        unique: true
     },
     type1: {
         type: String,
@@ -17,6 +16,43 @@ const PokeSchema = Schema({
         type: String,
         
     },
+    statBase: {
+        type: String,
+        
+    },
+    HP: {
+        type: String,
+        
+    },
+    attack: {
+        type: String,
+        
+    },
+    defense: {
+        type: String,
+        
+    },
+    spAttack: {
+        type: String,
+        
+    },
+    spDefense: {
+        type: String,
+        
+    },
+    speed: {
+        type: String,
+        
+    },
+    generation: {
+        type: String,
+        
+    },
+    legendary: {
+        type: String,
+        
+    },
+
     
 });
 module.exports = model('Pokemon', PokeSchema);
