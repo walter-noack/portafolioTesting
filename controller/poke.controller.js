@@ -44,52 +44,9 @@ const getName = async (req, res) => {
 }
 
 
-const updatePokemon = async (req, res) => {
-    console.log(req.body);
-    let pokemon = await Pokemon.updateOne(
-        req.params,
-        { $set: req.body }
-    )
-    .then(result=>{
-        res.status(200).json({
-            message: 'La información del Pokemon ha sido actualizada',
-        })
-    }).catch(err => {
-        res.status(500).json({
-            error: err
-        })
-    })
-    
-}
-
-const getPokeByID = (req, res) => {
-    Notes.findById({ _id: req.params.id })
-        .then(pokes => {
-            res.status(200).json({
-                message: 'Nota encontrada',
-                pokes: pokes
-            })
-        })
-        .catch(() => {
-            res.json({
-                ok: false,
-                msg: "Falló búsqueda de ID",
-            });
-        });
-};
-
-const deletePokemon = async (req, res) => {
-    console.log(req.params);
-    let pokemon = await Pokemon.deleteOne(req.params);
-    res.send(pokemon);
- };
-
 module.exports = {
     getPokemon,
     getType, 
     createPokemon,
-    updatePokemon,
-    deletePokemon,
-    getName,
-    getPokeByID
+    getName
 }
